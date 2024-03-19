@@ -1,27 +1,24 @@
 import React, { useState } from 'react'
-// import { Link } from 'react-router-dom'
 import { SideBarItem } from './SideBarItem'
 import { MdDashboard, MdInventory } from 'react-icons/md'
 import { TbReportMoney } from 'react-icons/tb'
 import { FaCashRegister, FaChartBar } from 'react-icons/fa'
 import { HiUsers } from 'react-icons/hi2'
 import { GrUpdate } from 'react-icons/gr'
-// import { SiPrisma } from 'react-icons/si'
 import { LuChevronFirst, LuChevronLast } from 'react-icons/lu'
 import { CiLogout } from 'react-icons/ci'
-// import { Search } from '../dashboard/Search'
 
 export const SideBar = ({ isAuthenticated, setLog }) => {
   const [open, setOpen] = useState(true)
 
   const Menus = [
-    { title: 'Dashboard', path: '/dashboard', src: 'MdDashboard', gap: true, icon: <MdDashboard className='text-2xl' /> },
-    { title: 'Inventario', path: '/inventario', src: 'Chart_fill', gap: true, icon: <MdInventory className='text-2xl' /> },
-    { title: 'Vender', path: '/vender', src: 'Chart_fill', gap: true, icon: <FaCashRegister className='text-2xl' /> },
-    { title: 'Ventas', path: '/ventas', src: 'Chart_fill', icon: <TbReportMoney className='text-2xl' /> },
-    { title: 'Clientes', path: '/clientes', src: 'Chart_fill', gap: true, icon: <HiUsers className='text-2xl' /> },
-    { title: 'Reportes', path: '/reportes', src: 'Chart_fill', gap: true, icon: <FaChartBar className='text-2xl' /> },
-    { title: 'Actualizaciones', path: '/actualizaciones', src: 'Chart_fill', gap: true, icon: <GrUpdate className='text-2xl' /> }
+    { title: 'Dashboard', path: '/dashboard', gap: true, icon: <MdDashboard className='text-2xl' /> },
+    { title: 'Inventario', path: '/inventario', gap: true, icon: <MdInventory className='text-2xl' /> },
+    { title: 'Vender', path: '/vender', gap: true, icon: <FaCashRegister className='text-2xl' /> },
+    { title: 'Ventas', path: '/ventas', icon: <TbReportMoney className='text-2xl' /> },
+    { title: 'Clientes', path: '/clientes', gap: true, icon: <HiUsers className='text-2xl' /> },
+    { title: 'Reportes', path: '/reportes', gap: true, icon: <FaChartBar className='text-2xl' /> },
+    { title: 'Actualizaciones', path: '/actualizaciones', gap: true, icon: <GrUpdate className='text-2xl' /> }
   ]
 
   return (

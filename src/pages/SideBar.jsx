@@ -13,14 +13,14 @@ import { Search } from '../components/dashboard/Search'
 // Componente principal que contiene el Sidebar y el contenido principal
 export const App = ({ isAuthenticated, setLog }) => {
   return (
-    <div className='flex flex-row h-screen w-screen bg-gray-100'>
+    <div className='flex flex-row h-screen w-screen'>
       <SideBar isAuthenticated={isAuthenticated} setLog={setLog} />
       <div className='relative flex flex-col w-full'>
 
         <div className='text-4xl text-white bg-indigo-700 p-3 w-full'>
           <Search />
         </div>
-        <div className='relative  h-full w-full'>
+        <div className='relative  h-full w-full bg-slate-100'>
           {/* Contenido principal */}
           <Routes>
             <Route path='dashboard' element={<DashboardScreen />} />
