@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { PaginationButtons } from '../components/paginate/PaginationButtons'
 import { SidebarCreate } from '../components/inventory/SidebarCreate'
-import { fetchProducts } from '../helpers/fetchProducts'
+// import { fetchProducts } from '../helpers/fetchProducts'
 import { GridProducts } from '../components/inventory/GridProducts'
+import { productos } from '../helpers/products'
 
 export const InventoryScreen = () => {
   const [products, setProducts] = useState([])
@@ -10,11 +11,9 @@ export const InventoryScreen = () => {
   const perPage = 6
 
   useEffect(() => {
-    fetchProducts(setProducts, currentPage)
-  }, [currentPage])
-
-  useEffect(() => {
     document.title = 'Inventario | Prisma'
+    // fetchProducts(setProducts)
+    setProducts(productos)
   }, [])
 
   // console.log(products)
